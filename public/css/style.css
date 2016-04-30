@@ -1,5 +1,5 @@
 .container-div {
-    max-width: 700px;
+    /*max-width: 700px;*/
     padding-top: 100px;
 }
 
@@ -11,12 +11,26 @@
 }
 .pokemon:hover{
     box-shadow: 0px 2px 20px -2px rgba(0,0,0,0.7);
+    background: #F1D116;
+    color: #3E3E3E;
+    transform: scale(1.1);
 }
 .img-panel {
     text-align: center;
 }
 .img-panel img {
     width: 23%;
+}
+.pageItem {
+    transition: .2s all ease-in-out;
+}
+.pageItem:hover{
+    box-shadow: 0px 2px 20px -2px rgba(0,0,0,0.7);
+    background: #E84520;
+    color: white;
+    cursor: pointer;
+    transform: scale(0.95);
+
 }
 /*.inner {
     position: absolute;

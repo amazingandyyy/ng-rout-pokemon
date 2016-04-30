@@ -19,6 +19,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: '/html/list.html',
             controller: 'listCtrl'
         })
+        .state('lists', {
+            url: '/lists/:id',
+            templateUrl: '/html/list.html',
+            controller: 'onePageCtrl'
+        })
         .state('detail', {
                 url: '/detail/:id',
                 templateUrl: '/html/detail.html',

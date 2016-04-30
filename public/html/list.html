@@ -2,10 +2,24 @@
     <h1>Catch your pokemon!</h1>
 </div>
 <div class="row">
-    <div class="col-xs-6 col-sm-3" ng-repeat="pokemon in pokemList" ng-repeat="pokemonSprite in pokemonSprites">
+    <nav>
+  <ul class="pagination">
+      <h4>Choose your world:</h4>
+    <div class='col-xs-4 col-sm-2' ng-repeat="page in pagesList">
+        <div class="panel panel-default pageItem">
+            <div class="panel-body">
+                <b ui-sref='lists({id: {{pagesList.indexOf(page)+1}} })'>{{page.name}}</b>
+            </div>
+        </div>
+    </div>
+
+  </ul>
+</nav>
+<h4>Pokemons in this world:</h4>
+    <div class="col-xs-6 col-sm-3" ng-repeat="pokemon in pokeList" ng-repeat="pokemonSprite in pokemonSprites">
         <div class="panel panel-default pokemon" ui-sref='detail({id: pokemon.entry_number})'>
             <div class="panel-body">
-                {{pokemon.entry_number}}- <b>{{pokemon.pokemon_species.name}}</b>
+                <b>{{pokemon.pokemon_species.name}}</b>
             </div>
         </div>
     </div>
