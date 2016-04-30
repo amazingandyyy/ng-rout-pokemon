@@ -4,11 +4,11 @@
 <div class="row">
     <nav>
   <ul class="pagination">
-      <h4>Choose your world:</h4>
+      <h4>Choose your village:</h4>
     <div class='col-xs-4 col-sm-2' ng-repeat="page in pagesList">
-        <div class="panel panel-default pageItem">
+        <div class="panel panel-default pageItem" ui-sref='lists({id: {{pagesList.indexOf(page)+1}} })'>
             <div class="panel-body">
-                <b ui-sref='lists({id: {{pagesList.indexOf(page)+1}} })'>{{page.name}}</b>
+                <b>{{page.name}}</b>
             </div>
         </div>
     </div>
