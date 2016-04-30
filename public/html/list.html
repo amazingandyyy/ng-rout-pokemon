@@ -1,0 +1,12 @@
+<div class="page-header">
+    <h1>Catch your pokemon!</h1>
+</div>
+<div class="row">
+    <div class="col-xs-6 col-sm-3" ng-repeat="pokemon in pokemList" ng-repeat="pokemonSprite in pokemonSprites">
+        <div class="panel panel-default pokemon" ui-sref='detail({id: pokemon.entry_number})'>
+            <div class="panel-body">
+                {{pokemon.entry_number}}- <b>{{pokemon.pokemon_species.name}}</b>
+            </div>
+        </div>
+    </div>
+</div>
