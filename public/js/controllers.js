@@ -48,10 +48,10 @@ app.controller('onePageCtrl', function($scope, Pokeapi, $stateParams) {
 });
 
 app.controller('detailCtrl', function($scope, Pokeapi, $stateParams, $state) {
-console.log('$stateParams.id: ', $stateParams.id);
-    Pokeapi.getOneById($stateParams.id)
+console.log('$stateParams.url: ', $stateParams.url);
+    Pokeapi.getOneById($stateParams.url)
         .then(pokemon => {
-            console.log('pokemon: ', pokemon);
+            console.log('pokemon pkay: ');
             $scope.pokemon = pokemon.data;
         })
         .catch(err => {

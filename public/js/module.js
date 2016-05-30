@@ -25,7 +25,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             controller: 'onePageCtrl'
         })
         .state('detail', {
-                url: '/detail/:id',
+                url: '/detail/:url',
                 templateUrl: '/html/detail.html',
                 // resolve: { // get this data first before we go to the Ctrl
                 //     pokemon: function(Pokeapi, $stateParams) {

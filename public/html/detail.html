@@ -1,4 +1,8 @@
-<div class="row">
+<div class="row text-center" ng-if="!pokemon.name">
+    <br><br><br><br>
+    <i class="fa fa-spinner fa-spin" style="font-size:4em"></i>
+</div>
+<div ng-if="pokemon.name" class="row">
     <div class="col-sm-12">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -6,7 +10,6 @@
             </div>
             <div class="panel-body">
                 <h4>height: {{pokemon.height}}</h4>
-                <h4>weight: {{pokemon.weight}}</h4>
             </div>
             <!-- <div class="inner"></div> -->
         </div>
